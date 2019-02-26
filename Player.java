@@ -17,6 +17,7 @@ public class Player {
 
 	// animation states
 	public int state = 0;
+	public boolean isAttacking = false;
 	
 
 	public Player (Draw draw){
@@ -118,27 +119,27 @@ public class Player {
 		y = y - 5;
 		reloadImage();
 		draw.repaint();
+		draw.checkCollision();
 	}
 
 	public void moveDown(){
 		y = y + 5;
 		reloadImage();
 		draw.repaint();
+		draw.checkCollision();
 	}
 
 	public void moveLeft(){
 		x = x - 5;
 		reloadImage();
 		draw.repaint();
+		draw.checkCollision();
 	}
 
 	public void moveRight(){
 		x = x + 5;
 		reloadImage();
 		draw.repaint();
+		draw.checkCollision();
 	}
-	
-
-
-
 }
